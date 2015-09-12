@@ -29,8 +29,12 @@ var less = lessMiddleware(file, url, {
 })
 
 var server = http.createServer(function (req, res) {
-  less(file, cssUrl, function () {
-    // handle non-less requests...
+  less(file, cssUrl, function (err) {
+    if (err) {
+      // syntax errors in LESS file
+    } else {
+      // request does not match our cssUrl
+    }
   })
 })
 
