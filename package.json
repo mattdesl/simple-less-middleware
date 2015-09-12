@@ -1,0 +1,48 @@
+{
+  "name": "simple-less-middleware",
+  "version": "1.0.0",
+  "description": "a simple LESS middleware for server requests",
+  "main": "index.js",
+  "license": "MIT",
+  "author": {
+    "name": "Matt DesLauriers",
+    "email": "dave.des@gmail.com",
+    "url": "https://github.com/mattdesl"
+  },
+  "dependencies": {
+    "filed": "^0.1.0",
+    "got": "^4.2.0",
+    "less-css-stream": "^1.0.0",
+    "less-plugin-autoprefix": "^1.4.2"
+  },
+  "devDependencies": {
+    "faucet": "0.0.1",
+    "got": "^4.2.0",
+    "standard": "^5.2.2",
+    "tape": "^4.2.0"
+  },
+  "scripts": {
+    "test": "standard && node test.js | faucet"
+  },
+  "keywords": [
+    "simple",
+    "less",
+    "middleware",
+    "req",
+    "res",
+    "css",
+    "pre",
+    "process",
+    "pre-process",
+    "autoprefix",
+    "prefixer"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mattdesl/simple-less-middleware.git"
+  },
+  "homepage": "https://github.com/mattdesl/simple-less-middleware",
+  "bugs": {
+    "url": "https://github.com/mattdesl/simple-less-middleware/issues"
+  }
+}
