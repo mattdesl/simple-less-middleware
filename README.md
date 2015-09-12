@@ -4,6 +4,8 @@
 
 A minimal LESS middleware for server requests.
 
+When the given CSS URL is requested, the server responds with the result of LESS transpilation.
+
 ## Install
 
 ```sh
