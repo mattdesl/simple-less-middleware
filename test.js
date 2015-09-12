@@ -22,3 +22,23 @@ test('a simple LESS middleware for server requests', function (t) {
       })
   })
 })
+
+test('can handle errors', function (t) {
+  t.plan(3)
+  var file = path.join(__dirname, 'test-err.less')
+  var cssUrl = 'main.css'
+
+  var middleware = less(file, cssUrl)
+  var server = http.createServer(middleware)
+  server.on('error', t.fail.bind(t))
+  server.listen(9910, 'localhost', function () {
+    got('http://localhost:9910/main.css',
+      function (err, body, res) {
+        if (!err) return t.fail('expected err')
+        t.equal(res.statusCode, 400)
+        t.equal(res.headers['content-type'], 'text/css')
+        t.equal(body, 'ERROR /projects/npmutils/simple-less-middleware/test-err.less:\n  Unrecognised input. Possibly missing opening \'{\', line 3: "  background:,},"')
+        server.close()
+      })
+  })
+})

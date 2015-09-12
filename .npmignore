@@ -7,4 +7,6 @@ test
 test.js
 demo/
 .npmignore
+test.less
+test-err.less
 LICENSE.md

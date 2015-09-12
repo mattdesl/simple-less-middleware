@@ -13,7 +13,8 @@
     "filed": "^0.1.0",
     "got": "^4.2.0",
     "less-css-stream": "^1.0.0",
-    "less-plugin-autoprefix": "^1.4.2"
+    "less-plugin-autoprefix": "^1.4.2",
+    "once": "^1.3.2"
   },
   "devDependencies": {
     "faucet": "0.0.1",
